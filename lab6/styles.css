@@ -86,3 +86,9 @@ div {
     background: red;
     border-radius: 50%;
 }
+
+#buttonForDumTitlesKillMe {
+    position: absolute;
+    left: 50%;
+    top: 0;
+}

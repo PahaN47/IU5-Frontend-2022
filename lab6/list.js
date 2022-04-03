@@ -1,6 +1,5 @@
 class List {
     constructor(id, ...items) {
-        alert('adding');
         this.list = document.createElement('div');
         document.body.appendChild(this.list);
         this.list.className = 'list';

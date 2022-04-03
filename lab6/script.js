@@ -1,7 +1,5 @@
 // task 1
 
-const { response } = require("express");
-
 let square = document.getElementById('square');
 
 square.addEventListener('click', function(e) {
@@ -65,4 +63,33 @@ ballBox.onmousemove = (e) => {
 };
 document.body.addEventListener('keyup', (e) => {
     if (e.key === 'Escape') moving = false;
+});
+
+
+// task 5
+
+
+function getAllTitles(data) {
+    throwTitlesonScreen(data.reduce((titles, episode) => {
+        titles.push(episode.title);
+        return titles;
+    }, []));
+}
+
+function throwTitlesonScreen(titles) {
+    for (title of titles) {
+        let titleBox = document.createElement('div');
+        titleBox.style.position = 'absolute';
+        titleBox.style.top = `${Math.random() * 98}%`;
+        titleBox.style.left = `${Math.random() * 95}%`;
+        titleBox.textContent = title;
+        document.body.appendChild(titleBox);
+    }
+}
+
+let button = document.getElementById('buttonForDumTitlesKillMe');
+button.addEventListener('click', (e) => {
+    fetch('https://breakingbadapi.com/api/episodes')
+        .then(response => response.json())
+        .then(data => getAllTitles(data));
 });

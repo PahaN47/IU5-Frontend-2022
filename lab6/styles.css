@@ -1,0 +1,88 @@
+div {
+    font-family: 'Consolas';
+}
+
+#square {
+    width: 256px;
+    height: 256px;
+    border: solid 2px black;
+}
+
+#counter {
+    width: fit-content;
+    height: fit-content;
+    font-size: 96px;
+    border: solid 2px black;
+}
+
+@keyframes list-button-hover {
+    to {
+        background: rgb(53, 168, 235);
+    }
+}
+
+@keyframes list-item-hover {
+    to {
+        background: rgb(180, 244, 255);
+    }
+}
+
+.list {
+    position: absolute;
+    width: 256px;
+    height: 32px;
+    background: lightgrey;
+    overflow: hidden;
+    border: 1px solid grey;
+    right: 0;
+    left: auto;
+    top: 0;
+}
+
+.list-button {
+    background: lightgrey;
+    height: 32px;
+    top: 0;
+    padding-left: 14%;
+    text-align: left;
+    line-height: 32px;
+}
+
+.list-button:hover {
+    animation: 300ms forwards;
+    animation-name: list-button-hover;
+}
+
+.list-item-box {
+    height: fit-content;
+    max-height: 97px;
+    background-color: white;
+    overflow-y: scroll;
+}
+
+.list-item {
+    height: 32px;
+    padding-left: 14%;
+    background: white;
+    line-height: 32px;
+}
+
+.list-item:hover {
+    animation: 300ms forwards;
+    animation-name: list-item-hover;
+}
+
+#ball-box {
+    position: absolute;
+    height: 800px;
+    width: 800px;
+    border: 1px solid black;
+}
+
+#ball {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    background: red;
+    border-radius: 50%;
+}

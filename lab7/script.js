@@ -2,7 +2,7 @@ const key = 'a5e82a728b935a4ea07eca664a5f978e';
 
 function getLocationWeather(e) {
     let location = document.querySelector('input').value;
-    fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=${1}&appid=${key}`)
+    fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${location}&limit=${1}&appid=${key}`)
     .then(response => response.ok ? response.json() : playWrong())
     .then(data => data.length === 0 ? playWrong() : getWeather(data));
 }
@@ -19,7 +19,7 @@ function showWeather(locationName, data) {
 
     let icon = document.getElementById('title').querySelector('img');
     icon.src =
-        `http://openweathermap.org/img/wn/${data.current.weather[0].icon}@4x.png`;
+        `https://openweathermap.org/img/wn/${data.current.weather[0].icon}@4x.png`;
     icon.style.filter = 'hue-rotate(30deg) brightness(150%)';
 
     let weatherBoxes = document.getElementsByClassName('weather-box');
@@ -48,7 +48,7 @@ function fillWeatherBox(weatherBox, data, special=false) {
 
     let icon = weatherBox.querySelector('.weather-icon');
     icon.style.background =
-        `url('http://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png')`;
+        `url('https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png')`;
     icon.style.filter = 'hue-rotate(30deg) brightness(150%)';
     icon.style.backgroundSize = 'contain';
     icon.style.backgroundRepeat = 'no-repeat';

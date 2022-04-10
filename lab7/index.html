@@ -4,9 +4,79 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css">
         <title>Lab7</title>
     </head>
     <body>
-
+        <div id="head">
+            <div id="title">
+                <img src="images/logo.svg">
+                <div>ПОГОДА</div>
+            </div>
+            <div id="input-box">
+                <form id="search" action="javascript:getLocationWeather()">
+                    <input type="text" placeholder="Город..." value="Москва">
+                </form>
+                <button id="submit">
+                    Поиск
+                </button>
+            </div>
+        </div>
+        <div id="main-body">
+            <div class="weather-box">
+                <div class="time">2022-04-08 23:00:00</div>
+                <div class="weather-desc">
+                    <div class="temperature">+10</div>
+                    <div class="weather-icon"></div>
+                </div>
+                <div class="weather-name">Фигня какая-то</div>
+                <div class="etc">
+                    <div class="wind">6 м/с</div>
+                    <div class="humidity">40%</div>
+                    <div class="pressure">760 мм.рт.ст</div>
+                </div>
+            </div>
+            <div class="weather-box">
+                <div class="time">2022-04-09 01:00:00</div>
+                <div class="weather-desc">
+                    <div class="temperature">+10</div>
+                    <div class="weather-icon"></div>
+                </div>
+                <div class="weather-name">Фигня какая-то</div>
+                <div class="etc">
+                    <div class="wind"></div>
+                    <div class="humidity"></div>
+                    <div class="pressure">  </div>
+                </div>
+            </div>
+            <div class="weather-box">
+                <div class="time">2022-04-09 07:00:00</div>
+                <div class="weather-desc">
+                    <div class="temperature">+10</div>
+                    <div class="weather-icon"></div>
+                </div>
+                <div class="weather-name">Фигня какая-то</div>
+                <div class="etc">
+                    <div class="wind"></div>
+                    <div class="humidity"></div>
+                    <div class="pressure">  </div>
+                </div>
+            </div>
+            <div class="weather-box">
+                <div class="time">2022-04-09 23:00:00</div>
+                <div class="weather-desc">
+                    <div class="temperature">+10</div>
+                    <div class="weather-icon"></div>
+                </div>
+                <div class="weather-name">Фигня какая-то</div>
+                <div class="etc">
+                    <div class="wind"></div>
+                    <div class="humidity"></div>
+                    <div class="pressure">  </div>
+                </div>
+            </div>
+            <div id="bottom"></div>
+        </div>
+        <script src="script.js"></script>
     </body>
 </html>

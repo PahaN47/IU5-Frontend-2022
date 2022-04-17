@@ -1,5 +1,9 @@
 .App {
+  height: 100vh;
+  padding-top: 16px;
   text-align: center;
+  background-image: url('https://i.kym-cdn.com/entries/icons/mobile/000/018/147/Shia_LaBeouf__Just_Do_It__Motivational_Speech_(Original_Video_by_LaBeouf__R%C3%B6nkk%C3%B6___Turner)_0-4_screenshot.jpg');
+  background-size: cover;
 }
 
 .App-logo {
@@ -35,4 +39,53 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+* {
+  font-family: 'Trebuchet MS';
+  font-weight: bold;
+  margin: 0;
+}
+
+* {
+  color: white;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.to-do-list {
+  margin-left: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 16px;
+}
+
+.item-edit > * {
+  color: black;
+  text-shadow: none;
+}
+
+.checked, .unchecked {
+  position: relative;
+  left: 16px;  
+}
+
+.checked {
+  color: #444;
+  text-shadow:  none;
+}
+
+.unchecked {
+  width: fit-content;
+  margin: 0;
+}
+
+.item-edit {
+  margin-top: 8px;
 }
